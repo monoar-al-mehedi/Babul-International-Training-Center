@@ -13,6 +13,10 @@ class CircularController extends Controller
 
     public function show(string $slug): View
     {
-        return view('pages.circulars.show', compact('slug'));
+        $circular = collect(config('circulars'))->firstWhere('slug', $slug);
+
+        abort_if(! $circular, 404);
+
+        return view('pages.circulars.show', ['circular' => $circular]);
     }
 }

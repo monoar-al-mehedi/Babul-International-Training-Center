@@ -13,6 +13,10 @@ class EventController extends Controller
 
     public function show(string $slug): View
     {
-        return view('pages.events.show', compact('slug'));
+        $event = collect(config('events'))->firstWhere('slug', $slug);
+
+        abort_if(! $event, 404);
+
+        return view('pages.events.show', ['event' => $event]);
     }
 }
