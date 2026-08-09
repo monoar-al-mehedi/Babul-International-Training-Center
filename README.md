@@ -36,6 +36,19 @@ php artisan serve
 
 Visit: http://127.0.0.1:8000
 
+## Free live deploy (Render)
+
+One-click free hosting:
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/monoar-al-mehedi/Babul-International-Training-Center)
+
+1. Open the button / link above
+2. Sign in with GitHub (free Render account)
+3. Click **Apply** / **Deploy Blueprint**
+4. Wait for build — your live URL will look like `https://babul-international-training-center.onrender.com`
+
+> Free tier sleeps after idle time; first visit may take ~30–60 seconds to wake.
+
 ## Stack
 
 - Laravel 13
